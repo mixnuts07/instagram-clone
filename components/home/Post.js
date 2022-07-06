@@ -1,5 +1,11 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Divider } from "@rneui/themed";
+import IconLike from "react-native-vector-icons/AntDesign";
+import IconLiked from "react-native-vector-icons/AntDesign";
+import IconMessage from "react-native-vector-icons/Feather";
+import IconSend from "react-native-vector-icons/Feather";
+import IconSave from "react-native-vector-icons/AntDesign";
+import IconSaved from "react-native-vector-icons/Entypo";
 
 const Post = ({ post }) => {
   return (
@@ -7,6 +13,7 @@ const Post = ({ post }) => {
       <Divider width={1} orientation="vertical" />
       <PostHeader post={post} />
       <PostImage post={post} />
+      <PostFooter />
     </View>
   );
 };
@@ -23,7 +30,14 @@ const PostHeader = ({ post }) => {
     >
       <View style={{ flexDirection: "row", alignItem: "center" }}>
         <Image source={post.profile_picture} style={style.story} />
-        <Text style={{ color: "white", marginLeft: 5, fontWeight: "700" }}>
+        <Text
+          style={{
+            color: "white",
+            marginLeft: 5,
+            fontWeight: "700",
+            top: 10,
+          }}
+        >
           {post.user}
         </Text>
       </View>
@@ -41,6 +55,25 @@ const PostImage = ({ post }) => (
   </View>
 );
 
+const PostFooter = () => <Icon />;
+
+const Icon = () => {
+  return (
+    <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+      <TouchableOpacity style={{ flexDirection: "row" }}>
+        <IconLike name="hearto" style={style.icon} size={20} />
+        {/* <IconLiked name="heart" style={style.icon} size={20} /> */}
+        <IconMessage name="message-circle" style={style.icon} size={20} />
+        <IconSend name="send" style={style.icon} size={20} />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <IconSave name="save" style={style.icon} size={20} />
+        {/* <IconSaved name="save" style={style.icon} size={20} /> */}
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 const style = StyleSheet.create({
   story: {
     width: 40,
@@ -49,6 +82,13 @@ const style = StyleSheet.create({
     marginLeft: 6,
     borderWidth: 1.5,
     borderColor: "#ff8501",
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    color: "white",
+    marginTop: 10,
+    marginLeft: 0.1,
   },
 });
 
