@@ -1,26 +1,26 @@
 export const USERS = [
   {
-    user: "alexSandwasers",
-    image: require("../assets/woman1.jpeg"),
+    user: "mixed_nuts_nuts",
+    image: require("../assets/postImage/profileImage.jpg"),
   },
   {
-    user: "selenazGomez",
-    image: require("../assets/woman2.jpeg"),
+    user: "Elon Musk",
+    image: require("../assets/postImage/ElonMusk.jpg"),
   },
   {
-    user: "IamJohnSohnAndJshon",
-    image: require("../assets/man1.jpeg"),
+    user: "Steven Jobs",
+    image: require("../assets/postImage/jobs.jpeg"),
   },
   {
-    user: "caretasSeen",
-    image: require("../assets/woman3.jpeg"),
+    user: "Vitalik Buterin",
+    image: require("../assets/postImage/Vitalik_Buterin.jpeg"),
   },
   {
-    user: "Dogismoney",
-    image: require("../assets/woman4.jpeg"),
+    user: "Jack Dorsey",
+    image: require("../assets/postImage/dorsey.jpeg"),
   },
   {
-    user: "Rabbit",
-    image: require("../assets/man2.jpeg"),
+    user: "Nikola Tesla",
+    image: require("../assets/postImage/tesla.jpeg"),
   },
 ];

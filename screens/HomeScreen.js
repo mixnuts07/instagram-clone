@@ -1,14 +1,19 @@
-import { View, StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import Header from "../components/home/Header";
 import Stories from "../components/home/Stories";
 import Post from "../components/home/Post";
+import { POSTS } from "../data/post";
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={style.container}>
       <Header />
       <Stories />
-      <Post />
+      <ScrollView>
+        {POSTS.map((post, index) => (
+          <Post post={post} key={index} />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 };

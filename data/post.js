@@ -2,7 +2,7 @@ import { USERS } from "./USERS";
 
 export const POSTS = [
   {
-    imageURL: "https://i.ibb.co/182bP1y/4k.png",
+    imageURL: require("../assets/imageURL/PostImageSelf.jpg"),
     user: USERS[0].user,
     likes: 7000,
     caption: "Train Ride to Hogwarts",
@@ -10,7 +10,20 @@ export const POSTS = [
     comments: [
       {
         user: "elonMusk",
-        comment: "Once I wake up finally ...🚀",
+        comment: "Go to the moon...🚀",
+      },
+    ],
+  },
+  {
+    imageURL: require("../assets/imageURL/elonmusk.jpg"),
+    user: USERS[1].user,
+    likes: 7000,
+    caption: "Train Ride to Hogwarts",
+    profile_picture: USERS[1].image,
+    comments: [
+      {
+        user: "mixed_nuts_nuts",
+        comment: "I adore you...🚀",
       },
     ],
   },
