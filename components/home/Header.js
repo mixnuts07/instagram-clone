@@ -49,13 +49,13 @@ const style = StyleSheet.create({
     flexDirection: "row",
     marginHorizontal: 20,
   },
-  iconsContainer: {
-    flexDirection: "row",
-  },
   logo: {
     width: 100,
     height: 50,
     resizeMode: "contain",
+  },
+  iconsContainer: {
+    flexDirection: "row",
   },
   icon: {
     width: 30,
