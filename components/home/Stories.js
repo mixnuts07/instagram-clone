@@ -1,28 +1,33 @@
-import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
-import React from "react";
+import { Text, View, ScrollView, Image, StyleSheet } from "react-native";
 import { USERS } from "../../data/USERS";
 
 const Stories = () => {
   return (
     <View style={{ marginBottom: 13 }}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {/* {USERS.map((story, index) => (
-          <Image source={require(story.image)} style={style.story} />
-        ))} */}
         {USERS.map((story, index) => (
-          //   <Text style={{ color: "white" }}>{`"${story.image}"`}</Text>
-          <Image source={story.image} style={style.story} />
+          <View key={index} style={{ alignItems: "center" }}>
+            <Image source={story.image} style={style.story} />
+            <Text style={{ color: "white" }}>
+              {story.user.length > 11
+                ? story.user.slice(0, 10).toLowerCase() + "..."
+                : story.user.toLowerCase()}
+            </Text>
+          </View>
         ))}
       </ScrollView>
-      <Text style={{ color: "white" }}>Stories</Text>
     </View>
   );
 };
 
 const style = StyleSheet.create({
   story: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
+    borderRadius: 50,
+    marginLeft: 4,
+    borderWidth: 3,
+    borderColor: "#ff8501",
   },
 });
 

@@ -1,5 +1,8 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
+import IconAdd from "react-native-vector-icons/Octicons";
+import IconHeart from "react-native-vector-icons/AntDesign";
+import IconMessage from "react-native-vector-icons/AntDesign";
 export default function Header() {
   return (
     <View style={style.container}>
@@ -11,31 +14,16 @@ export default function Header() {
       </TouchableOpacity>
       <View style={style.iconsContainer}>
         <TouchableOpacity>
-          <Image
-            source={{
-              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png",
-            }}
-            style={style.icon}
-          />
+          <IconAdd name="diff-added" style={style.icon} size={20} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image
-            source={{
-              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/like--v1.png",
-            }}
-            style={style.icon}
-          />
+          <IconHeart name="hearto" style={style.icon} size={20} />
         </TouchableOpacity>
         <TouchableOpacity>
           <View style={style.unreadBadge}>
             <Text style={style.unreadBadgeText}>99</Text>
           </View>
-          <Image
-            source={{
-              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/facebook-messenger.png",
-            }}
-            style={style.icon}
-          />
+          <IconMessage name="message1" style={style.icon} size={20} />
         </TouchableOpacity>
       </View>
     </View>
@@ -58,14 +46,16 @@ const style = StyleSheet.create({
     flexDirection: "row",
   },
   icon: {
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
+    color: "white",
+    marginTop: 20,
   },
   unreadBadge: {
     backgroundColor: "#FF3250",
     position: "absolute",
-    left: 20,
-    bottom: 18,
+    left: 10,
+    bottom: 30,
     width: 25,
     height: 18,
     borderRadius: 9,

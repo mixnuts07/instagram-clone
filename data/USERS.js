@@ -1,26 +1,26 @@
 export const USERS = [
   {
-    user: "woman1",
+    user: "alexSandwasers",
     image: require("../assets/woman1.jpeg"),
   },
   {
-    user: "woman2",
+    user: "selenazGomez",
     image: require("../assets/woman2.jpeg"),
   },
   {
-    user: "man1",
+    user: "IamJohnSohnAndJshon",
     image: require("../assets/man1.jpeg"),
   },
   {
-    user: "woman3",
+    user: "caretasSeen",
     image: require("../assets/woman3.jpeg"),
   },
   {
-    user: "woman4",
+    user: "Dogismoney",
     image: require("../assets/woman4.jpeg"),
   },
   {
-    user: "man2",
+    user: "Rabbit",
     image: require("../assets/man2.jpeg"),
   },
 ];
