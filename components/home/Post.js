@@ -13,7 +13,9 @@ const Post = ({ post }) => {
       <Divider width={1} orientation="vertical" />
       <PostHeader post={post} />
       <PostImage post={post} />
-      <PostFooter />
+      <Icon />
+      <Likes post={post} />
+      <Caption post={post} />
     </View>
   );
 };
@@ -55,11 +57,14 @@ const PostImage = ({ post }) => (
   </View>
 );
 
-const PostFooter = () => <Icon />;
-
 const Icon = () => {
   return (
-    <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+    <View
+      style={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
       <TouchableOpacity style={{ flexDirection: "row" }}>
         <IconLike name="hearto" style={style.icon} size={20} />
         {/* <IconLiked name="heart" style={style.icon} size={20} /> */}
@@ -74,6 +79,23 @@ const Icon = () => {
   );
 };
 
+const Likes = ({ post }) => (
+  <View style={{ flexDirection: "row", marginTop: 0.1 }}>
+    <Text style={{ color: "white", fontWeight: "600" }}>
+      {post.likes.toLocaleString("en")} likes
+    </Text>
+  </View>
+);
+
+const Caption = ({ post }) => (
+  <View style={{ marginTop: 5 }}>
+    <Text style={{ color: "white" }}>
+      <Text style={{ fontWeight: "600" }}>{post.user}</Text>
+      <Text> {post.caption}</Text>
+    </Text>
+  </View>
+);
+
 const style = StyleSheet.create({
   story: {
     width: 40,
@@ -81,14 +103,13 @@ const style = StyleSheet.create({
     borderRadius: 50,
     marginLeft: 6,
     borderWidth: 1.5,
-    borderColor: "#ff8501",
+    borderColor: "#007c00",
   },
   icon: {
     width: 40,
     height: 40,
     color: "white",
     marginTop: 10,
-    marginLeft: 0.1,
   },
 });
 

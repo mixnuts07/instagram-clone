@@ -4,8 +4,9 @@ export const POSTS = [
   {
     imageURL: require("../assets/imageURL/PostImageSelf.jpg"),
     user: USERS[0].user,
-    likes: 7000,
-    caption: "Train Ride to Hogwarts",
+    likes: 10000,
+    caption:
+      "Will decentralized trust and ownership accomplish the rejection of poverty? . l challenge this.",
     profile_picture: USERS[0].image,
     comments: [
       {
@@ -17,7 +18,7 @@ export const POSTS = [
   {
     imageURL: require("../assets/imageURL/elonmusk.jpg"),
     user: USERS[1].user,
-    likes: 7000,
+    likes: 300,
     caption: "Train Ride to Hogwarts",
     profile_picture: USERS[1].image,
     comments: [
